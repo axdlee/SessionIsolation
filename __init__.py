@@ -1,0 +1,1 @@
+"""SessionIsolation plugin for LangBot"""

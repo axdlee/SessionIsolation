@@ -1,0 +1,23 @@
+apiVersion: v1  # 不要改动
+kind: Plugin  # 不要改动
+metadata:
+  # author 和 name 唯一确定一个插件
+  author: axdlee  # 插件作者，修改为你的名称
+  name: SessionIsolation # 插件名称，修改为你的插件名称
+  repository: 'https://github.com/axdlee/SessionIsolation'  # 插件仓库地址，修改为你的插件 GitHub 仓库地址
+  version: 0.1.0  # 插件版本，修改为你的插件版本
+  description:
+    en_US: Session isolation plugin for group chat, providing independent session context for each user in group chat.
+    zh_CN: 群聊会话隔离插件，用于在群聊中为每个用户提供独立的会话上下文。
+  label:
+    en_US: SessionIsolation
+    zh_CN: 群聊会话隔离
+
+spec:
+  # 本插件不需要配置项
+  config: []
+
+execution:
+  python:
+    path: main.py # 插件主程序路径，必须与上方插件入口代码的文件名相同
+    attr: SessionIsolation # 插件类名，必须与上方代码中声明的类名相同
